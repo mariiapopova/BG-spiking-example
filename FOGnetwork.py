@@ -655,7 +655,7 @@ def FOGnetwork(pd,stim,freq,Istim, timespike, tmax, dt, v1, v2, v3, v4, v5, v6, 
         CA6=CA6+dt*(1*1e-4*(-Ica6-It6-kca[2]*CA6))
 
         #SNr effs
-        vsnre[:,i]=Vsnre+dt*(1/Cm*(-Il6e-Ik6e-Ina6e-It6e-Ica6e-Iahp6e-Isnsnre-Istrsnre-Iprfsnre-Icnfsnre-Ippnsnre-Igesnre-Isncsnre+Iappsnr-Ic4))
+        vsnre[:,i]=Vsnre+dt*(1/Cm*(-Il6e-Ik6e-Ina6e-It6e-Ica6e-Iahp6e-Isnsnre-Istrsnre-Iprfsnre-Icnfsnre-Ippnsnre-Igesnre-Isncsnre+Idbs[i]+Iappsnr-Ic4))
         #vsnre[:,i]=Vsnre+dt*(1/Cm*(-Il6e-Ik6e-Ina6e-It6e-Ica6e-Iahp6e-Ic4+Iappsnr-Isnsnre-Istrsnre-Iprfsnre-Icnfsnre-Ippnsnre-Igesnre-Isncsnre))#
         N6e=N6e+dt*(0.1*(n6e-N6e)/tn6e) #misspelled in So paper
         H6e=H6e+dt*(0.05*(h6e-H6e)/th6e) #misspelled in So paper 
