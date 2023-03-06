@@ -9,7 +9,7 @@ from createSMCinput import *
 from FOGnetwork import *
 from plotres import *
 import time
-#%matplotlib auto
+%matplotlib auto
 
 
 def Initial():
